@@ -1,6 +1,6 @@
 // configuration
-// change to true if you want animations instead of letters
-let letters = false
+// change to false if you want letters instead of animations
+let animations = true
 
 // the inspiration for this program is from David Whale and
 // addresses the question: "what if you have 30 students and
@@ -39,6 +39,7 @@ let letters = false
 
 // the output events are
 
+// - A: all leds on
 // - H: happy face
 // - G: grumpy face
 // - R: radio message (send)
@@ -133,6 +134,15 @@ let radioSend = images.createImage(`
 . . . . # . . . . #
 `)
 
+let allOn = images.createImage(`
+# # # # # . . . . .   
+# # # # # . . . . .  
+# # # # # . . . . .
+# # # # # . . . . .
+# # # # # . . . . .
+`)
+
+
 let happy = images.createImage(`
 . . . . . . . . . .   
 . # . # . . . . . .  
@@ -167,8 +177,8 @@ let slide = images.createImage(`
 
 let inputEvents = ["A", "B", "S", "F", "U", "D", "L", "R", "E", "P"];
 let inputAnimations = [pressA, pressB, shake, faceUp, faceDown, goDark, goLoud, radioReceive, pressEmo, pressP0 ]
-let outputEvents = ["H", "G", "R", "P", "S"];
-let outputAnimations = [happy, grumpy, radioSend, ping, slide]
+let outputEvents = ["A", "H", "G", "R", "P", "S"];
+let outputAnimations = [allOn, happy, grumpy, radioSend, ping, slide]
 let currentInputEventIndex = 0;
 let currentOutputEventIndex = 0;
 let mode = 0; 
@@ -181,7 +191,7 @@ function getInput() {
 }
 
 function showInput() {
-    if (!letters) {     
+    if (animations) {     
         let anim = inputAnimations[currentInputEventIndex]
         anim.showImage(0, 500)
         anim.showImage(5, 500)
@@ -195,18 +205,25 @@ function getOutput() {
 }
 
 function showOutput() {
-    if (!letters) {
+    let out = outputEvents[currentOutputEventIndex]
+    if (animations) {
         let anim = outputAnimations[currentOutputEventIndex]
         anim.showImage(0, 500)
         anim.showImage(5, 500)
     }
     else
-        basic.showString(outputEvents[currentOutputEventIndex])
+        basic.showString(out)
+    if (out == "P")
+        soundExpression.hello.play()
+    else if (out == "S")
+        soundExpression.slide.play()
 }
 
 function performOutput() {
     const out = getOutput()
-    if (out == "H") 
+    if (out == "A")
+        led.plotAll()
+    else if (out == "H") 
         basic.showIcon(IconNames.Happy)
     else if (out == "G")
         basic.showIcon(IconNames.Sad)
