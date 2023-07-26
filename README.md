@@ -1,24 +1,38 @@
+# The micro:bit "WhenDo" application
 
-> Open this page at [https://tballmsft.github.io/whendo/](https://tballmsft.github.io/whendo/)
+How can you introduce students to the features of the BBC micro:bit
+and programming with just the micro:bit itself? The answer is this
+simple "WhenDo" application.   
 
-## Use as Extension
+## How does it work?
 
-This repository can be added as an **extension** in MakeCode.
 
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/tballmsft/whendo** and import
+### Input events
 
-## Edit this project
+First, press the A button to cycle through the following *input events*,
+each of which is shown by an animation on the micro:bit screen.
 
-To edit this repository in MakeCode.
+- press: the A button
+- press: the B button
+- motion: shake the micro:bit
+- motion: screen face up
+- motion: screen face down
+- see: dark environment
+- hear: loud sound
+- radio: receive message
+- touch: micro:bit emoticon
+- touch: pin P0
 
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **Import** then click on **Import URL**
-* paste **https://github.com/tballmsft/whendo** and click import
+When you find the input event you want, press the B button to accept it.
 
-#### Metadata (used for search, rendering)
+### Output events
 
-* for PXT/microbit
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+Now, press the B button to cycle through the following *output actions*:
+
+- show: happy face
+- show: sad face
+- radio: send message
+- speaker: doorbell
+- speaker: slide
+
+When you find the output action you want press the A button to accept it.
