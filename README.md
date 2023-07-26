@@ -10,7 +10,7 @@ The program allows you to specify an input event I and an output action O
 using just the A/B buttons of the micro:bit. Together, I and O make up 
 a simple rule: 
 
-- **When** input event I occurs **Do** ouput action O. 
+- **When** input event I occurs **Do** output action O. 
 
 The micro:bit will execute this rule forever until you reset it, so you
 can create a new rule. Some events and actions use the micro:bit
