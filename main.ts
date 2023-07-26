@@ -1,3 +1,7 @@
+// configuration
+// change to true if you want animations instead of letters
+let letters = false
+
 // the inspiration for this program is from David Whale and
 // addresses the question: "what if you have 30 students and
 // 30 micro:bits and no computers". 
@@ -31,7 +35,7 @@
 // - L: loud
 // - R: radio message (receive)
 // - E: touch emoticon
-// - T: touch P0
+// - P: touch P0
 
 // the output events are
 
@@ -161,7 +165,7 @@ let slide = images.createImage(`
 . . . . # . . . . #
 `)
 
-let inputEvents = ["A", "B", "S", "F", "U", "D", "L", "R", "E", "T"];
+let inputEvents = ["A", "B", "S", "F", "U", "D", "L", "R", "E", "P"];
 let inputAnimations = [pressA, pressB, shake, faceUp, faceDown, goDark, goLoud, radioReceive, pressEmo, pressP0 ]
 let outputEvents = ["H", "G", "R", "P", "S"];
 let outputAnimations = [happy, grumpy, radioSend, ping, slide]
@@ -177,8 +181,8 @@ function getInput() {
 }
 
 function showInput() {
-    let anim = inputAnimations[currentInputEventIndex]
-    if (anim) {     
+    if (!letters) {     
+        let anim = inputAnimations[currentInputEventIndex]
         anim.showImage(0, 500)
         anim.showImage(5, 500)
     }
@@ -191,8 +195,8 @@ function getOutput() {
 }
 
 function showOutput() {
-    let anim = outputAnimations[currentOutputEventIndex]
-    if (anim) {
+    if (!letters) {
+        let anim = outputAnimations[currentOutputEventIndex]
         anim.showImage(0, 500)
         anim.showImage(5, 500)
     }
@@ -272,7 +276,7 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 })
 
 input.onPinPressed(TouchPin.P0, function () {
-    if (mode == 2 && getInput() == "T")
+    if (mode == 2 && getInput() == "P")
         performOutput()
 })
 

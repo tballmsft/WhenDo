@@ -10,18 +10,19 @@ simple "WhenDo" application.
 ### Input events
 
 First, press the A button to cycle through the following *input events*,
-each of which is shown by an animation on the micro:bit screen.
+each of which is shown by an animation on the micro:bit screen (or via
+a single letter, depending on how you configure the application):
 
-- press: the A button
-- press: the B button
-- motion: shake the micro:bit
-- motion: screen face up
-- motion: screen face down
-- see: dark environment
-- hear: loud sound
-- radio: receive message
-- touch: micro:bit emoticon
-- touch: pin P0
+- A: press the A button
+- B: ress the B button
+- S: shake the micro:bit
+- F: hold screen face up
+- U: hold screen face down
+- D: see dark environment
+- L: hear loud sound
+- R: receive radio message
+- E: press micro:bit emoticon
+- P: press pin P0
 
 When you find the input event you want, press the B button to accept it.
 
