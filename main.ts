@@ -3,8 +3,9 @@
 let animations = true
 
 // the inspiration for this program is from David Whale and
-// addresses the question: "what if you have 30 students and
-// 30 micro:bits and no computers". 
+// addresses the question: 
+
+// "what can you do if you have 30 students, 30 micro:bits, no other computers?" 
 
 // the solution here is to create a simple "programming"
 // experience using just the micro:bit, where the user
