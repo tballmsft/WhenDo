@@ -2,51 +2,6 @@
 // change to false if you want letters instead of animations
 let animations = true
 
-// the inspiration for this program is from David Whale and
-// addresses the question: 
-
-// "what can you do if you have 30 students, 30 micro:bits, no other computers?" 
-
-// the solution here is to create a simple "programming"
-// experience using just the micro:bit, where the user
-// gets to create one When <input-event> Do <action> rule.
-
-// the behavior
-// - press the A button to rotate through micro:bit "input events"
-// - press the B button to accept the current input event I
-//   and start rotating through micro:bit "output events"
-// - press the A button to accept the current output event O
-//   and begin program execution
-
-// During programing execution, do the following forever:
-
-// - wait for input event I 
-// - produce output event O
-// - wait a second
-// - clear the screen
-
-// the input events are
-
-// - A: press of the A button
-// - B: press of the B button
-// - S: shake
-// - F: screen up
-// - U: screen down
-// - D: dark
-// - L: loud
-// - R: radio message (receive)
-// - E: touch emoticon
-// - P: touch P0
-
-// the output events are
-
-// - A: all leds on
-// - H: happy face
-// - G: grumpy face
-// - R: radio message (send)
-// - P: ping (sound)
-// - S: slide (sound)
-
 let pressA = images.createImage(`
 . . # . . . . # . .
 . . # . . . # . # .
