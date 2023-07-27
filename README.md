@@ -101,8 +101,8 @@ to accept the current channel. Your program will now begin executing.
 
 ```
                 #       
-                #     
-                #   
+              # # #    
+                   
   #   #       #   #    
 # # # # #   # # # # #
 ```
@@ -112,8 +112,8 @@ to accept the current channel. Your program will now begin executing.
 ```
 # # # # #   # # # # #   
   #   #       #   #   
-                #   
-                #   
+                   
+              # # #   
                 #   
 ```
 

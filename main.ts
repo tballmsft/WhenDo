@@ -44,8 +44,8 @@ let shake = images.createImage(`
 
 let faceUp = images.createImage(`
 . . . . . . . # . .   
-. . . . . . . # . . 
-. . . . . . . # . .
+. . . . . . # # # . 
+. . . . . . . . . .
 . # . # . . # . # .  
 # # # # # # # # # #
 `)
@@ -53,8 +53,8 @@ let faceUp = images.createImage(`
 let faceDown = images.createImage(`
 # # # # # # # # # #   
 . # . # . . # . # . 
-. . . . . . . # . .
-. . . . . . . # . .
+. . . . . . . . . .
+. . . . . . # # # .
 . . . . . . . # . .
 `)
 
