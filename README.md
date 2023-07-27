@@ -61,3 +61,146 @@ it on the whiteboard so everyone else knows that number is being used.
 
 Use the A button to rotate through the channels (1-16). Press the B button
 to accept the current channel. Your program will now begin executing.
+
+## Input animations
+
+- A: press the A button
+- B: press the B button
+- S: shake the micro:bit
+- F: hold screen face up
+- U: hold screen face down
+- D: see darkness (low light level)
+- L: hear loud sound
+- R: radio **receive** message
+- E: press micro:bit emoticon
+- P: press pin P0
+
+
+let pressA = images.createImage(`
+. . # . . . . # . .
+. . # . . . # . # .
+# . # . # . # # # .
+. # # # . . # . # . 
+. . # . . . # . # .
+`)
+
+let pressB = images.createImage(`
+. . # . . . # # . .
+. . # . . . # . # .
+# . # . # . # # # .
+. # # # . . # . # . 
+. . # . . . # # . .
+`)
+
+let pressEmo = images.createImage(`
+. . # . . . . . . .
+. . # . . . # # # .
+# . # . # # . . . #
+. # # # . . # # # . 
+. . # . . . . . . .
+`)
+
+let pressP0 = images.createImage(`
+. . # . . . . # . .
+. . # . . . # . # .
+# . # . # . # . # .
+. # # # . . # . # . 
+. . # . . . . # . .
+`)
+
+let shake = images.createImage(`
+. . # # . . # # . .   
+. . . . # # . . . . 
+# . # . # # . # . #
+# . . . . . . . . #
+. # # . . . . # # .
+`)
+
+let faceUp = images.createImage(`
+. . . . . . . # . .   
+. . . . . . . # . . 
+. . . . . . . # . .
+. # . # . . # . # .  
+# # # # # # # # # #
+`)
+
+let faceDown = images.createImage(`
+# # # # # # # # # #   
+. # . # . . # . # . 
+. . . . . . . # . .
+. . . . . . . # . .
+. . . . . . . # . .
+`)
+
+let goDark = images.createImage(`
+. . . . . . . . . .   
+. . . . . . . . . .  
+. . # . . . . . . .
+. . . . . . . . . .
+. . . . . . . . . .
+`)
+
+let goLoud = images.createImage(`
+. . . . . . . # . .   
+. # . . . . # # . #  
+# # . . . # # # # .
+. # . . . . # # . #
+. . . . . . . # . .
+`)
+
+let radioReceive = images.createImage(`
+. . . . # . . # . #   
+. . . . # # # # # #  
+. . . . # . . # . #
+. . . . # . . . . #
+. . . . # . . . . #
+`)
+
+let radioSend = images.createImage(`
+. . . . # . # . . #   
+. . . . # # # # # #  
+. . . . # . # . . #
+. . . . # . . . . #
+. . . . # . . . . #
+`)
+
+let allOn = images.createImage(`
+# # # # # . . . . .   
+# # # # # . . . . .  
+# # # # # . . . . .
+# # # # # . . . . .
+# # # # # . . . . .
+`)
+
+
+let happy = images.createImage(`
+. . . . . . . . . .   
+. # . # . . . . . .  
+. . . . . . . . . .
+# . . . # . . . . .
+. # # # . . . . . .
+`)
+
+let grumpy = images.createImage(`
+. . . . . . . . . .   
+. # . # . . . . . .  
+. . . . . . . . . .
+. # # # . . . . . .
+# . . . # . . . . .
+`)
+
+let ping = images.createImage(`
+. . . . . . . . . .   
+. . . . . . . # . .  
+. . # . . . # . # .
+. . . . . . . # . .
+. . . . . . . . . .
+`)
+
+let slide = images.createImage(`
+# . # # . # . . . .   
+. # # # . . # . # #  
+. . # . . . . # # #
+. . . # . . . . # .
+. . . . # . . . . #
+`)
