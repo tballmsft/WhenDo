@@ -85,128 +85,142 @@ to accept the current channel. Your program will now begin executing.
 ```
 
 ### shake the micro:bit
+
+```
+    # #       # #       
+        #   #         
+#   #   #   #   #   #
+#                   #
+  # #           # # 
+```
+
 ### hold screen face up
+
+```
+                #       
+                #     
+                #   
+  #   #       #   #    
+# # # # #   # # # # #
+```
+
 ### hold screen face down
+
+```
+# # # # #   # # # # #   
+  #   #       #   #   
+                #   
+                #   
+                #   
+```
+
 ### see darkness (low light level)
-### hear loud sound
-### radio **receive** message
-### press micro:bit emoticon
-### press pin P0
 
-
-
-
-
-
-let pressEmo = imagescreateImage(`
-    #             
-    #       # # # 
-#   #   # #       #
-  # # #     # # #   
-    #             
-`)
-
-let pressP0 = imagescreateImage(`
-    #         #   
-    #       #   # 
-#   #   #   #   # 
-  # # #     #   #   
-    #         #   
-`)
-
-let shake = imagescreateImage(`
-    # #     # #       
-        # #         
-#   #   # #   #   #
-#                 #
-  # #         # # 
-`)
-
-let faceUp = imagescreateImage(`
-              #       
-              #     
-              #   
-  #   #     #   #    
-# # # # # # # # # #
-`)
-
-let faceDown = imagescreateImage(`
-# # # # # # # # # #   
-  #   #     #   #   
-              #   
-              #   
-              #   
-`)
-
-let goDark = imagescreateImage(`
+```
                       
                      
     #             
                   
                   
-`)
+```
 
-let goLoud = imagescreateImage(`
+### hear loud sound
+
+```
               #       
   #         # #   #  
 # #       # # # # 
   #         # #   #
               #   
-`)
+```
 
-let radioReceive = imagescreateImage(`
-        #     #   #   
-        # # # # # #  
-        #     #   #
-        #         #
-        #         #
-`)
+### radio **receive** message
 
-let radioSend = imagescreateImage(`
-        #   #     #   
-        # # # # # #  
-        #   #     #
-        #         #
-        #         #
-`)
+```
+        #       #   #   
+        #   # # # # #  
+        #       #   #
+        #           #
+        #           #
+```
 
-let allOn = imagescreateImage(`
+### press micro:bit emoticon
+
+```
+    #             
+    #         # # # 
+#   #   #   #       #
+  # # #       # # #   
+    #             
+```
+
+### press pin P0
+
+```
+    #         #   
+    #       #   # 
+#   #   #   #   # 
+  # # #     #   #   
+    #         #   
+```
+
+
+# all LEDs on
+
+```
 # # # # #             
 # # # # #            
 # # # # #         
 # # # # #         
 # # # # #         
-`)
+```
 
+# show happy face
 
-let happy = imagescreateImage(`
-                      
+```
+
   #   #              
                   
 #       #         
   # # #           
-`)
+```
 
-let grumpy = imagescreateImage(`
-                      
+# show grumpy face
+
+```                  
+
   #   #              
                   
   # # #           
 #       #         
-`)
+```
 
-let ping = imagescreateImage(`
+# radio send message
+
+```
+        #     #     #   
+        #   # # # # #  
+        #     #     #
+        #           #
+        #           #
+```
+
+# play doorbell sound
+
+```
                       
               #      
     #       #   # 
               #   
                   
-`)
+```
 
-let slide = imagescreateImage(`
+# play slide sound
+
+```
 #   # #   #           
   # # #     #   # #  
     #         # # #
       #         # 
         #         #
-`)
+```
