@@ -2,7 +2,7 @@
 
 How can you introduce students to the features of the BBC micro:bit
 and programming with just the micro:bit itself? The answer is this
-simple "WhenDo" application, which is the brainchild of David Whale.   
+simple "WhenDo" application, which is the brainchild of David Whale 
 
 ## How does it work?
 
@@ -10,7 +10,7 @@ The program allows you to specify an input event I and an output action O
 using just the A/B buttons of the micro:bit. Together, I and O make up 
 a simple rule: 
 
-- **When** input event I occurs **Do** output action O. 
+- **When** input event I occurs **Do** output action O
 
 The micro:bit will execute this rule forever until you reset it, so you
 can create a new rule. Some events and actions use the micro:bit
@@ -64,143 +64,149 @@ to accept the current channel. Your program will now begin executing.
 
 ## Input animations
 
-- A: press the A button
-- B: press the B button
-- S: shake the micro:bit
-- F: hold screen face up
-- U: hold screen face down
-- D: see darkness (low light level)
-- L: hear loud sound
-- R: radio **receive** message
-- E: press micro:bit emoticon
-- P: press pin P0
+### press the A button
+
+```
+    #         #   
+    #       #   # 
+#   #   #   # # # 
+  # # #     #   #   
+    #       #   # 
+```
+
+### press the B button
+
+```
+    #       # #   
+    #       #   # 
+#   #   #   # # # 
+  # # #     #   #   
+    #       # #   
+```
+
+### shake the micro:bit
+### hold screen face up
+### hold screen face down
+### see darkness (low light level)
+### hear loud sound
+### radio **receive** message
+### press micro:bit emoticon
+### press pin P0
 
 
-let pressA = images.createImage(`
-. . # . . . . # . .
-. . # . . . # . # .
-# . # . # . # # # .
-. # # # . . # . # . 
-. . # . . . # . # .
+
+
+
+
+let pressEmo = imagescreateImage(`
+    #             
+    #       # # # 
+#   #   # #       #
+  # # #     # # #   
+    #             
 `)
 
-let pressB = images.createImage(`
-. . # . . . # # . .
-. . # . . . # . # .
-# . # . # . # # # .
-. # # # . . # . # . 
-. . # . . . # # . .
+let pressP0 = imagescreateImage(`
+    #         #   
+    #       #   # 
+#   #   #   #   # 
+  # # #     #   #   
+    #         #   
 `)
 
-let pressEmo = images.createImage(`
-. . # . . . . . . .
-. . # . . . # # # .
-# . # . # # . . . #
-. # # # . . # # # . 
-. . # . . . . . . .
+let shake = imagescreateImage(`
+    # #     # #       
+        # #         
+#   #   # #   #   #
+#                 #
+  # #         # # 
 `)
 
-let pressP0 = images.createImage(`
-. . # . . . . # . .
-. . # . . . # . # .
-# . # . # . # . # .
-. # # # . . # . # . 
-. . # . . . . # . .
-`)
-
-let shake = images.createImage(`
-. . # # . . # # . .   
-. . . . # # . . . . 
-# . # . # # . # . #
-# . . . . . . . . #
-. # # . . . . # # .
-`)
-
-let faceUp = images.createImage(`
-. . . . . . . # . .   
-. . . . . . . # . . 
-. . . . . . . # . .
-. # . # . . # . # .  
+let faceUp = imagescreateImage(`
+              #       
+              #     
+              #   
+  #   #     #   #    
 # # # # # # # # # #
 `)
 
-let faceDown = images.createImage(`
+let faceDown = imagescreateImage(`
 # # # # # # # # # #   
-. # . # . . # . # . 
-. . . . . . . # . .
-. . . . . . . # . .
-. . . . . . . # . .
+  #   #     #   #   
+              #   
+              #   
+              #   
 `)
 
-let goDark = images.createImage(`
-. . . . . . . . . .   
-. . . . . . . . . .  
-. . # . . . . . . .
-. . . . . . . . . .
-. . . . . . . . . .
+let goDark = imagescreateImage(`
+                      
+                     
+    #             
+                  
+                  
 `)
 
-let goLoud = images.createImage(`
-. . . . . . . # . .   
-. # . . . . # # . #  
-# # . . . # # # # .
-. # . . . . # # . #
-. . . . . . . # . .
+let goLoud = imagescreateImage(`
+              #       
+  #         # #   #  
+# #       # # # # 
+  #         # #   #
+              #   
 `)
 
-let radioReceive = images.createImage(`
-. . . . # . . # . #   
-. . . . # # # # # #  
-. . . . # . . # . #
-. . . . # . . . . #
-. . . . # . . . . #
+let radioReceive = imagescreateImage(`
+        #     #   #   
+        # # # # # #  
+        #     #   #
+        #         #
+        #         #
 `)
 
-let radioSend = images.createImage(`
-. . . . # . # . . #   
-. . . . # # # # # #  
-. . . . # . # . . #
-. . . . # . . . . #
-. . . . # . . . . #
+let radioSend = imagescreateImage(`
+        #   #     #   
+        # # # # # #  
+        #   #     #
+        #         #
+        #         #
 `)
 
-let allOn = images.createImage(`
-# # # # # . . . . .   
-# # # # # . . . . .  
-# # # # # . . . . .
-# # # # # . . . . .
-# # # # # . . . . .
+let allOn = imagescreateImage(`
+# # # # #             
+# # # # #            
+# # # # #         
+# # # # #         
+# # # # #         
 `)
 
 
-let happy = images.createImage(`
-. . . . . . . . . .   
-. # . # . . . . . .  
-. . . . . . . . . .
-# . . . # . . . . .
-. # # # . . . . . .
+let happy = imagescreateImage(`
+                      
+  #   #              
+                  
+#       #         
+  # # #           
 `)
 
-let grumpy = images.createImage(`
-. . . . . . . . . .   
-. # . # . . . . . .  
-. . . . . . . . . .
-. # # # . . . . . .
-# . . . # . . . . .
+let grumpy = imagescreateImage(`
+                      
+  #   #              
+                  
+  # # #           
+#       #         
 `)
 
-let ping = images.createImage(`
-. . . . . . . . . .   
-. . . . . . . # . .  
-. . # . . . # . # .
-. . . . . . . # . .
-. . . . . . . . . .
+let ping = imagescreateImage(`
+                      
+              #      
+    #       #   # 
+              #   
+                  
 `)
 
-let slide = images.createImage(`
-# . # # . # . . . .   
-. # # # . . # . # #  
-. . # . . . . # # #
-. . . # . . . . # .
-. . . . # . . . . #
+let slide = imagescreateImage(`
+#   # #   #           
+  # # #     #   # #  
+    #         # # #
+      #         # 
+        #         #
 `)
