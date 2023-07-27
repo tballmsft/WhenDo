@@ -19,9 +19,8 @@ you can have multiple micro:bits (in a large group) work together!
 
 ### Input events
 
-First, press the A button to cycle through the following *input events*,
-each of which is shown by an animation on the micro:bit screen (or via
-a single letter, depending on how you configure the application):
+First, press the A button to cycle through the following *input events*
+in the following order:
 
 - A: press the A button
 - B: press the B button
@@ -35,6 +34,10 @@ a single letter, depending on how you configure the application):
 - P: press pin P0
 
 When you find the input event you want, press the B button to accept it.
+
+Each input event is displayed as an animation on the micro:bit screen,
+which are presented below (or via a single letter, as shown above, 
+depending on how you configure the application):
 
 ### Output events
 
@@ -62,7 +65,7 @@ it on the whiteboard so everyone else knows that number is being used.
 Use the A button to rotate through the channels (1-16). Press the B button
 to accept the current channel. Your program will now begin executing.
 
-## Input animations
+## Input event animations
 
 ### press the A button
 
@@ -121,7 +124,7 @@ to accept the current channel. Your program will now begin executing.
                      
     #             
                   
-                  
+                  .
 ```
 
 ### hear loud sound
@@ -164,8 +167,9 @@ to accept the current channel. Your program will now begin executing.
     #         #   
 ```
 
+## Output action animations
 
-# all LEDs on
+### all LEDs on
 
 ```
 # # # # #             
@@ -175,7 +179,7 @@ to accept the current channel. Your program will now begin executing.
 # # # # #         
 ```
 
-# show happy face
+### show happy face
 
 ```
 
@@ -185,7 +189,7 @@ to accept the current channel. Your program will now begin executing.
   # # #           
 ```
 
-# show grumpy face
+### show grumpy face
 
 ```                  
 
@@ -195,7 +199,7 @@ to accept the current channel. Your program will now begin executing.
 #       #         
 ```
 
-# radio send message
+### radio send message
 
 ```
         #     #     #   
@@ -205,17 +209,17 @@ to accept the current channel. Your program will now begin executing.
         #           #
 ```
 
-# play doorbell sound
+### play doorbell sound
 
 ```
                       
               #      
     #       #   # 
               #   
-                  
+                      .
 ```
 
-# play slide sound
+### play slide sound
 
 ```
 #   # #   #           
