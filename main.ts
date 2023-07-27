@@ -75,19 +75,19 @@ let goLoud = images.createImage(`
 `)
 
 let radioReceive = images.createImage(`
-. . . . # . . # . #   
-. . . . # # # # # #  
-. . . . # . . # . #
-. . . . # . . . . #
-. . . . # . . . . #
+. . # . . . # # # .   
+. # . # . # . # . #  
+. . # . . . # # # .
+. . # . . . . # . .
+. . # . . . . # . .
 `)
 
 let radioSend = images.createImage(`
-. . . . # . # . . #   
-. . . . # # # # # #  
-. . . . # . # . . #
-. . . . # . . . . #
-. . . . # . . . . #
+. . # . . . # # # .
+. # . # . # . # . #
+. . # . . . # # # .
+. . # . . . . # . .
+. . # . . . . # . .
 `)
 
 let allOn = images.createImage(`

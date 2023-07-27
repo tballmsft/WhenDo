@@ -140,11 +140,11 @@ to accept the current channel. Your program will now begin executing.
 ### radio **receive** message
 
 ```
-        #       #   #   
-        #   # # # # #  
-        #       #   #
-        #           #
-        #           #
+    #       # # #     
+  #   #   #   #   #  
+    #       # # #  
+    #         #    
+    #         #    
 ```
 
 ### press micro:bit emoticon
@@ -202,11 +202,11 @@ to accept the current channel. Your program will now begin executing.
 ### radio send message
 
 ```
-        #     #     #   
-        #   # # # # #  
-        #     #     #
-        #           #
-        #           #
+    #       # # #     
+  #   #   #   #   #  
+    #       # # #  
+    #         #    
+    #         #    
 ```
 
 ### play doorbell sound
