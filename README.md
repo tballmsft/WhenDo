@@ -39,7 +39,7 @@ Each input event is displayed as an animation on the micro:bit screen,
 which are presented below (or via a single letter, as shown above, 
 depending on how you configure the application):
 
-### Output events
+### Output actions
 
 Now, press the B button to cycle through the following *output actions*:
 
