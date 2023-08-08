@@ -1,8 +1,10 @@
 # The micro:bit "WhenDo" application
 
-How can you introduce students to the features of the BBC micro:bit
+How can you introduce students to the features of the BBC micro:bit (V2)
 and programming with just the micro:bit itself? The answer is this
 simple "WhenDo" application, which is the brainchild of David Whale 
+Click [here](https://makecode.microbit.org/S09273-08316-87957-87908) to 
+open the WhenDo application in MakeCode. 
 
 ## How does it work?
 
