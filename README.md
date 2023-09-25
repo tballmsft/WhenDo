@@ -22,7 +22,7 @@ you can have multiple micro:bits (in a large group) work together!
 
 ### Input events
 
-First, press the A button to cycle through the following *input events*
+First, press the **A button** to cycle through the following *input events*
 in the following order:
 
 - A: press the A button
@@ -36,7 +36,7 @@ in the following order:
 - E: press micro:bit emoticon
 - P: press pin P0
 
-When you find the input event you want, press the B button to accept it.
+When you find the input event you want, press the **B button** to accept it.
 
 Each input event is displayed as an animation on the micro:bit screen,
 which are presented below (or via a single letter, as shown above, 
@@ -44,7 +44,7 @@ depending on how you configure the application):
 
 ### Output actions
 
-Now, press the B button to cycle through the following *output actions*:
+Now, press the **A button** to cycle through the following *output actions*:
 
 - A: all LEDs on
 - H: show happy face
@@ -53,7 +53,7 @@ Now, press the B button to cycle through the following *output actions*:
 - P: play doorbell sound
 - S: play slide sound
 
-When you find the output action you want press the A button to accept it.
+When you find the output action you want press the **B button** to accept it.
 The program will begin executing immediately, unless one of the input events 
 or output actions is radio.
 
@@ -65,7 +65,7 @@ used (1-16). This is especially useful if you are working in a large group with
 many micro:bits. Find your partner and agree on a radio group number. Write
 it on the whiteboard so everyone else knows that number is being used.
 
-Use the A button to rotate through the channels (1-16). Press the B button
+Press the **A button** to cycle through the channels (1-16). Press the **B button**
 to accept the current channel. Your program will now begin executing.
 
 ## Input event animations

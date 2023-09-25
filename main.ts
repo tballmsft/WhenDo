@@ -198,12 +198,7 @@ input.onButtonPressed(Button.A, () => {
   if (mode == 0) {
       currentInputEventIndex = (currentInputEventIndex + 1) % inputEvents.length;
   } else if (mode == 1) {
-      if (getOutput() == "R" || getInput() == "R")
-        mode = 3 // radio group mode
-      else {
-        mode = 2
-        basic.clearScreen()
-      }
+      currentOutputEventIndex = (currentOutputEventIndex + 1) % outputEvents.length;
   } else if (mode == 2) {
       if (getInput() == "A")
         performOutput()
@@ -214,18 +209,23 @@ input.onButtonPressed(Button.A, () => {
 })
 
 input.onButtonPressed(Button.B, () => {
-    if (mode == 0) {
-        mode = 1
-    } else if (mode == 1) {
-        currentOutputEventIndex = (currentOutputEventIndex + 1) % outputEvents.length;
-    } else if (mode == 2) {
-        if (getInput() == "B")
-            performOutput()
-    } else if (mode == 3) {
+  if (mode == 0) {
+    mode = 1
+  } else if (mode == 1) {
+    if (getOutput() == "R" || getInput() == "R")
+        mode = 3 // radio group mode
+    else {
+        mode = 2
+        basic.clearScreen()
+    }
+  } else if (mode == 2) {
+    if (getInput() == "B")
+        performOutput()
+  } else if (mode == 3) {
         mode = 2
         radio.setGroup(group)
         basic.clearScreen()
-    }
+  }
 })
 
 input.onGesture(Gesture.Shake, function () {
