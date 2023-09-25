@@ -7,6 +7,8 @@ simple "WhenDo" application, which is the brainchild of David Whale.
 Click [here](https://makecode.microbit.org/S09273-08316-87957-87908) to 
 open the WhenDo application in MakeCode. 
 
+Print out [this handout](./docs/whendo.pdf) for use in class. 
+
 ## How does it work?
 
 The program allows you to specify an input event I and an output action O 
