@@ -137,7 +137,14 @@ let outputEvents = ["A", "H", "G", "R", "P", "S"];
 let outputAnimations = [allOn, happy, grumpy, radioSend, ping, slide]
 let currentInputEventIndex = 0;
 let currentOutputEventIndex = 0;
-let mode = 0; 
+
+enum Mode {
+    Input,
+    Output,
+    Run,
+    Radiogroup
+}
+let mode = Mode.Input; 
 music.setBuiltInSpeakerEnabled(true)
 music.setVolume(127)
 let group = 1
@@ -195,77 +202,77 @@ function performOutput() {
 
 
 input.onButtonPressed(Button.A, () => {
-  if (mode == 0) {
+  if (mode == Mode.Input) {
       currentInputEventIndex = (currentInputEventIndex + 1) % inputEvents.length;
-  } else if (mode == 1) {
+  } else if (mode == Mode.Output) {
       currentOutputEventIndex = (currentOutputEventIndex + 1) % outputEvents.length;
-  } else if (mode == 2) {
+  } else if (mode == Mode.Run) {
       if (getInput() == "A")
         performOutput()
-  } else if (mode == 3) {
+  } else if (mode == Mode.Radiogroup) {
       group = (group + 1) % 17
       if (group == 0) group = 1
   }
 })
 
 input.onButtonPressed(Button.B, () => {
-  if (mode == 0) {
-    mode = 1
-  } else if (mode == 1) {
+  if (mode == Mode.Input) {
+    mode = Mode.Output
+  } else if (mode == Mode.Output) {
     if (getOutput() == "R" || getInput() == "R")
-        mode = 3 // radio group mode
+        mode = Mode.Radiogroup
     else {
-        mode = 2
+        mode = Mode.Run
         basic.clearScreen()
     }
-  } else if (mode == 2) {
+  } else if (mode == Mode.Run) {
     if (getInput() == "B")
         performOutput()
-  } else if (mode == 3) {
-        mode = 2
+  } else if (mode == Mode.Radiogroup) {
+        mode = Mode.Run
         radio.setGroup(group)
         basic.clearScreen()
   }
 })
 
 input.onGesture(Gesture.Shake, function () {
-    if (mode == 2 && getInput() == "S")
+    if (mode == Mode.Run && getInput() == "S")
         performOutput()
 })
 
 input.onGesture(Gesture.ScreenUp, function () {
-    if (mode == 2 && getInput() == "F")
+    if (mode == Mode.Run && getInput() == "F")
         performOutput()
 })
 
 input.onGesture(Gesture.ScreenDown, function () {
-    if (mode == 2 && getInput() == "U")
+    if (mode == Mode.Run && getInput() == "U")
         performOutput()
 })
 
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
-    if (mode == 2 && getInput() == "E")
+    if (mode == Mode.Run && getInput() == "E")
         performOutput()
 })
 
 input.onPinPressed(TouchPin.P0, function () {
-    if (mode == 2 && getInput() == "P")
+    if (mode == Mode.Run && getInput() == "P")
         performOutput()
 })
 
 radio.onReceivedNumber(function (receivedNumber: number) {
-    if (mode == 2 && getInput() == "R" && receivedNumber == 42)
+    if (mode == Mode.Run && getInput() == "R" && receivedNumber == 42)
         performOutput()
 })
 
 forever(() => {
-    if (mode == 0)
+    if (mode == Mode.Input)
         showInput()
-    else if (mode == 1)
+    else if (mode == Mode.Output)
         showOutput()
-    else if (mode == 3)
+    else if (mode == Mode.Radiogroup)
         basic.showNumber(group)
-    else if (mode == 2 && getInput() == "D" && input.lightLevel() < 2) {
+    else if (mode == Mode.Run && getInput() == "D" && input.lightLevel() < 2) {
         performOutput()
     }
 })
